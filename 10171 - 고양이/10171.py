@@ -4,10 +4,4 @@
 (  /  )
  \(__)|
  """
- #include <stdio.h>
-
-int main(){
-    printf("\\    /\\\n )  ( ')\n(  /  )\n \\(__)|");
-    
-    return 0;
-}
+print("\\    /\\\n )  ( ')\n(  /  )\n \\(__)|")
