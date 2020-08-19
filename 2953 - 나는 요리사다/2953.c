@@ -16,18 +16,18 @@ int main(){
 
 	//Bubble Sort로 정렬  
 	for(int i=0; i<4; i++){
-		for(int j=0; j<4; j++){
-			int temp;
-			if(arr1[j]>arr1[j+1]){
-				temp = arr1[j+1];
-				arr1[j+1] = arr1[j];
-				arr1[j] = temp;
-			}
+	    for(int j=0; j<4; j++){
+		int temp;
+		if(arr1[j]>arr1[j+1]){
+		    temp = arr1[j+1];
+		    arr1[j+1] = arr1[j];
+		    arr1[j] = temp;
 		}
+	    }
 	}
 	N = arr1[4]; // 가장 큰 점수 
 	for(int i=0; i<5; i++){
-		if(arr[i]==N) P = i+1; // 우승자 번호 찾기  
+	    if(arr[i]==N) P = i+1; // 우승자 번호 찾기  
 	}
 	printf("%d %d", P, N);
 }
