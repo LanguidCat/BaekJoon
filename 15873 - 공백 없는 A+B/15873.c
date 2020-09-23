@@ -14,11 +14,11 @@ int main(){
         if(arr[1] == '0'){
             int temp=(arr[0] - '0') * 10 + arr[2] - '0';
             printf("%d", temp);
-		    }
-		    else{
+        }
+	else{
             int temp=arr[0] - '0' + (arr[1] - '0') * 10;
-		        printf("%d", temp);
-		    }
+	    printf("%d", temp);
+	}
     }
     else printf("%d", 20); 
 }
