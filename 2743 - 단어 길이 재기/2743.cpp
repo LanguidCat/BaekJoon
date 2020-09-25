@@ -7,5 +7,5 @@ int main(){
     string s;
     cin >> s;
     cout << s.size();
-	  return 0;
+    return 0;
 }
