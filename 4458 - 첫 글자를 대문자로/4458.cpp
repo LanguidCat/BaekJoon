@@ -15,6 +15,6 @@ int main(){
         else{
             s[0] -= 32;
             cout << s << endl;
-		    }
+	}
     } 
 }
