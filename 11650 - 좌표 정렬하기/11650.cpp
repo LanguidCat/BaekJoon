@@ -13,9 +13,9 @@ int main(){
     	int t1, t2;
     	cin >> t1 >> t2;
     	v.push_back(make_pair(t1, t2));
-	}
-	sort(v.begin(), v.end());
-	for(int i = 0; i < n; i++){
-		cout << v[i].first << ' ' << v[i].second << endl;
-	}
+    }
+    sort(v.begin(), v.end());
+    for(int i = 0; i < n; i++){
+        cout << v[i].first << ' ' << v[i].second << endl;
+    }
 }
