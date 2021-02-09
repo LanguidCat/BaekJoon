@@ -1,16 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int Euc(int a, int b){
-    return b ? Euc(b, a % b) : a;
-}
-
-int Max(int a, int b){
-    int start = a;
-    while (start % a || start % b){
-        start++;
-    }
-    return start;
+int gcd(int a, int b){
+    return b ? gcd(b, a % b) : a;
 }
 
 int main(){
@@ -26,5 +18,5 @@ int main(){
         A = b; B = a;
     }
 
-    cout << Euc(A, B) << '\n' << Max(A, B) << '\n';
+    cout << gcd(A, B) << '\n' << A * B / gcd(A, B) << '\n';
 }
