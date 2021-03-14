@@ -1,17 +1,14 @@
-def Han_test(n):
-    if n//100 == 0: return 1 # 두 자릿수는 항상 한수 
-    elif n==1000: return 0 # 최댓값 1000은 항상 한수가 아님
-    else: # 한수의 검증
-        N = str(n) # 입력값을 str형으로 변환
-        a = int(N[0]) 
-        b = int(N[1])
-        c = int(N[2])
-        if (b-a) == (c-b): return 1 # 두 공차가 동일하면 한수 
-        else: return 0 # 이외엔 한수가 아님
-N = int(input())
-count = 0
-for i in range(1, N+1):
-    s = Han_test(i)
-    if s: count += 1 # 한수의 개수 세기
-    else: continue
-print(count)
+def han(n):
+    if n < 100: return n
+    else:
+        rslt = 0
+        for i in range(100, n + 1):
+            hnd = i // 100
+            ten = (i % 100) // 10
+            one = i % 10
+            if (hnd - ten) == (ten - one): rslt += 1
+        
+        return rslt + 99  # 세 자릿수 미만의 한수는 99개 
+
+n = int(input())
+print(han(n))
