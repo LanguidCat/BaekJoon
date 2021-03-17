@@ -9,6 +9,7 @@ def make(n, lst):
         else: rslt += lst[i]
     return rslt
 
+
 a = int(input())
 for i in range(a):
     b = int(input())
