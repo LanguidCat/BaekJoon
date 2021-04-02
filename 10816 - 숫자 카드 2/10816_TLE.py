@@ -1,13 +1,15 @@
+# 30%대에서 시간초과 발생
+
 import sys
 
 # 이진 탐색을 통해 특정 요소를 찾는 함수 
-def bin_search(m, lst):
+def bin_search(m, lst, size):
     start = 0
-    end = len(lst) - 1
+    end = size - 1
     while start <= end:
         mid = (start + end) // 2
         if lst[mid] == m: 
-            return bin_cnt(m, mid, lst)
+            return bin_cnt(m, mid, lst, size)
         elif lst[mid] < m: start = mid + 1
         elif lst[mid] > m: end = mid - 1
         
@@ -16,7 +18,7 @@ def bin_search(m, lst):
 
 # 찾은 특정 요소의 위치에서 
 # 좌우로 같은 요소의 개수를 찾는 함수
-def bin_cnt(m, idx, lst):
+def bin_cnt(m, idx, lst, size):
     r = idx + 1
     l = idx - 1
     result = 1
@@ -30,7 +32,7 @@ def bin_cnt(m, idx, lst):
             break
 
     # 우측 검색 
-    while r < len(lst):
+    while r < size:
         if lst[r] == m:
             result += 1
             r += 1
@@ -51,5 +53,5 @@ N_lst.sort()
 
 # 출력
 for i in M_lst: 
-    print(bin_search(i, N_lst), end = ' ')
+    print(bin_search(i, N_lst, N), end = ' ')
 print()
