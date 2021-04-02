@@ -1,5 +1,3 @@
-# 23%대에서 시간 초과 
-
 import sys
 
 # 이진 탐색을 통해 특정 요소를 찾는 함수 
@@ -38,7 +36,7 @@ def bin_cnt(m, idx, lst):
             r += 1
         else:
             break
-
+        
     return result
 
 
