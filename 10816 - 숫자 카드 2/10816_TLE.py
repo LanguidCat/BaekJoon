@@ -1,4 +1,5 @@
-# 30%대에서 시간초과 발생
+# Python3: 30% TLE
+# PyPy3: 73% TLE
 
 import sys
 
